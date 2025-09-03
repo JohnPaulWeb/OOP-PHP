@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script src="">
+        var xhr;
+        if(window.ActiveXObject) {
+
+            try {
+                xhr = new ActiveObject("Microsoft.XMLHTTP");
+            } catch(e) {
+                alet('error');
+            }
+        }
+
+        else if(window.XMLHttpRequest) {
+            
+            try {
+                 xhr = new XMLHttpRequest();
+            } catch(e) {
+                alert('error');
+            }
+           
+        }
+
+
+        var value = "best";
+
+        xhr.open("GET", "me.txt", true);
+        xhr.send();
+
+        xhr.open("GET", "me.txt?name" + value, true);
+        xhr.send();
+
+
+
+
+        // Practice
+        var get = "food";
+
+        xhr.open("GET", "you.txt", true);
+        xhr.send();
+
+        xhr.open();
+
+    </script>
+    
+</body>
+</html>
